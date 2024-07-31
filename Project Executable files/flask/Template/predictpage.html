@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2a148077;
+        }
+        .header {
+            background-color: #000;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .navbar {
+            text-align: right;
+            padding: 10px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #000;
+        }
+        .breadcrumb {
+            padding: 15px;
+            background-color: #eee;
+            border-bottom: 1px solid #ddd;
+        }
+        .breadcrumb a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .container p {
+            font-size: 18px;
+            margin: 0;
+        }
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Slope Sense</h1>
+    </div>
+    <div class="navbar">
+        <a href="/">HOME</a>
+        <a href="/predict_page">ABOUT</a>
+        <a href="#footer">CONTACT</a>
+        <a href="#">GET STARTED</a>
+    </div>
+    <div class="breadcrumb">
+        <a href="#">Home</a> / <span>Result Page</span>
+    </div>
+    <div class="col-lg-8">
+        <form id="faq" data-form onsubmit="return calculatetrip()">
+          
+        </form>
+        <div class="result-container">
+          <div class="result-text">
+            <h1>Result</h1>
+            <p class="mb-0"><strong>{{ prediction_text }}</strong></p>
+          </div>
+        </div>
+    <div class="footer">
+        <p>6th floor, Sundarayya Vignana Kendram,<br>
+           Technical Block, Madhava Reddy Colony, Gachibowli,<br>
+           Hyderabad, Telangana</p>
+        <p>info@example.com</p>
+        <p>+1 5589 55488 55s</p>
+        <p>© Copyright <strong>Remember</strong>. All Rights Reserved</p>
+        <p>Designed by <a href="#">BootstrapMade</a></p>
+    </div>
+</body>
+</html>

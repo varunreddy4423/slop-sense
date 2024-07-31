@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Kilometers of Ski Trail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .header {
+            background-color: #000;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .form-group input, .form-group select {
+            flex: 2;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group select {
+            appearance: none;
+        }
+        .form-group .flex-1 {
+            flex: 1;
+        }
+        .form-group .flex-2 {
+            flex: 2;
+        }
+        .predict-btn {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .predict-btn button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .predict-btn button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="faq" class="faq">
+    <div class="header">
+        <h1>Ski Resorts</h1>
+    </div>
+    <div class="container">
+        <div class="title">
+            <h2>Predict Kilometers of Ski Trail</h2>
+        </div>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="rating">Rating</label>
+                <input type="text" id="rating" name="rating">
+            </div>
+            <div class="form-group">
+                <label for="freeRides">Kilometers of Free Rides</label>
+                <input type="text" id="freeRides" name="freeRides">
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="select">select</option>
+                    <option value="India">India</option>
+                    <option value="America">America</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Australia">Australia</option>
+                    <option value="New York">New York</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="easySlopes">Easy Slopes (in Km)</label>
+                <input type="text" id="easySlopes" name="easySlopes">
+            </div>
+            <div class="form-group">
+                <label for="difficultSlopes">Difficult Slopes (in Km)</label>
+                <input type="text" id="difficultSlopes" name="difficultSlopes">
+            </div>
+            <div class="form-group">
+                <label for="reliability">Reliability</label>
+                <input type="text" id="reliability" name="reliability">
+            </div>
+            <div class="form-group">
+                <label for="cleanliness">Cleanliness</label>
+                <input type="text" id="cleanliness" name="cleanliness">
+            </div>
+            <div class="form-group">
+                <label for="amenities">Amenities</label>
+                <input type="text" id="amenities" name="amenities">
+            </div>
+            <div class="form-group">
+                <label for="snowPark">Snow Park</label>
+                <input type="text" id="snowPark" name="snowPark">
+            </div>
+            <div class="form-group">
+                <label for="stars">Stars</label>
+                <select id="stars" name="stars">
+                    <option value="select">select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="continent">Continent</label>
+                <select id="continent" name="continent">
+                    <option value="select">select</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Antarctica">Antarctica</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="South America">South America</option>
+                    <option value="North America">South America</option>
+            </div>
+            <div class="form-group">
+                <label for="altitude">Altitude (in metres)</label>
+                <input type="text" id="altitude" name="altitude">
+            </div>
+            <div class="form-group">
+                <label for="intermediateSlopes">Intermediate Slopes (in Km)</label>
+                <input type="text" id="intermediateSlopes" name="intermediateSlopes">
+            </div>
+            <div class="form-group">
+                <label for="liftCable">Lift Cable Rating</label>
+                <input type="text" id="liftCable" name="liftCable">
+            </div>
+            <div class="form-group">
+                <label for="orientation">Orientation</label>
+                <input type="text" id="orientation" name="orientation">
+            </div>
+            <div class="form-group">
+                <label for="environment">Environment Friendly Rate</label>
+                <input type="text" id="environment" name="environment">
+            </div>
+            <div class="form-group">
+                <label for="beginners">Beginners</label>
+                <input type="text" id="beginners" name="beginners">
+            </div>
+            <div class="form-group">
+                <label for="skiTrails">Ski Trails</label>
+                <input type="text" id="skiTrails" name="skiTrails">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+    </div>
+</body>
+</html>
